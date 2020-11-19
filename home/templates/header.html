@@ -15,7 +15,8 @@
 
             <div class = "ht-right">
                 {% if user.id is not NONE %}
-                        <a href="/user" class="login-panel"><i ><img src = '{{ request.session.userimage }}' style="height: 35px; width: 30px; border-radius: 10%" alt=" image"></i>{{ user  }}</a>
+                        <a href="/user" class="login-panel"><i ><img src = '{{ request.session.user_image }}' style="height: 35px; width: 35px; border-radius: 10%"/></i>{{ user  }}</a>
+                        <a href="dashboard" class="login-panel" >Dashboard </a>
                         <a href="/logout" class="login-panel"><i class="fa fa-user"></i>Log-Out</a>
                     {% else %}
                         <a href="/login" class="login-panel"><i class="fa fa-user"></i>Login</a>
@@ -60,7 +61,7 @@
                                 <div class="cart-hover">
                                     <div class="select-button">
                                         <a href="/cart/" class="primary-btn view-card">VIEW CARt</a>
-                                        <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
+                                        <a href="{% url "orders:order_create" %}" class="primary-btn checkout-btn">CHECK OUT</a>
                                     </div>
                                 </div>
                             </li>
