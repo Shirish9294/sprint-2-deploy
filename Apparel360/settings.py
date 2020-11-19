@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'user.apps.UserConfig',
+    'orders.apps.OrdersConfig',
     'product.apps.ProductConfig',
     'cart.apps.CartConfig',
     'ckeditor',
